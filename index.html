@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emp Directory</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1><span class="glyphicon glyphicon-list-alt"></span> Employee Management</h1>
+      <p> A comprehensive Directory of Employee Billable Hours
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <div class="panel panel-default">
+       <div class="panel-heading danger">
+          <h3 class="panel-title">Current Employees</h3>
+        </div>
+          <table class="table">
+           <thead class="thead-inverse">
+             <tr>
+                <th>Employee Name</th>
+                <th>Role</th>
+                <th>Start Date</th>
+                <th>Months Worked</th>
+                <th>Monthly Rate</th>
+                <th>Total Billed</th>
+             </tr>
+            </thead>
+            <tbody id="t-body">
+              
+            </tbody>
+           </table>
+       
+     </div>     
+  </div>
+
+
+  <div class="container">
+     <div class="panel panel-default">
+       <div class="panel-heading danger">
+         <h3 class="panel-title"> Add Employee</h3>
+       </div>
+       <div class="panel-body">
+         <form>
+               <div class="form-group">
+                 <label for="exampleInputEmail1">Employee Name </label>
+                 <input type="text" class="form-control form-query" id="input-employee" placeholder="Your Name" name="emp">
+               </div>
+         
+              <div class="form-group">
+                <label for="exampleInputPassword1">Role</label>
+                <input type="text" class="form-control" id="input-role" placeholder="Your Role">  
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Start Date (DD/MM/YY)</label>
+                <input type="text" class="form-control" id="input-start-date" placeholder="When did you Start?">  
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Monthly Rate</label>
+                <input type="text" class="form-control" id="input-rate" placeholder="How much bucks u make bro">  
+              </div>
+              <button type="submit" class="btn btn-default active buttons" id="submit"><span class="glyphicon glyphicon-search"></span> Submit</button>
+         </form>
+      </div>
+    </div>
+  </div>
+
+
+
+ <script type ="text/javascript" src="./js/script.js">  </script>
+ <script src="./js/moment.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</body>
+</html>
